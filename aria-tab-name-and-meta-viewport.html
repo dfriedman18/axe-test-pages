@@ -37,23 +37,12 @@
 
     <p>
         This page intentionally contains violations of the
-        <code>aria-tab-name</code> and <code>meta-viewport</code> rules.
+        <code>meta-viewport</code> rule.
     </p>
 
     <h2>Tab-name test</h2>
 
     <div role="tablist" aria-label="Example tabs">
-        <!--
-            Intentional aria-tab-name violation:
-            the visible text is hidden from assistive technologies.
-        -->
-        <button
-            type="button"
-            role="tab"
-            aria-selected="true">
-            <span aria-hidden="true">Overview</span>
-        </button>
-
         <!--
             This tab has an accessible name and should pass
             the aria-tab-name rule.

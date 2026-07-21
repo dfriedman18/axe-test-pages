@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>axe-core aria-tab-name test</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+
+        [role="tablist"] {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        [role="tab"] {
+            min-width: 8rem;
+            min-height: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>aria-tab-name test page</h1>
+
+    <p>
+        The first two tabs intentionally have no accessible name.
+        The third tab should pass.
+    </p>
+
+    <div role="tablist" aria-label="Example tabs">
+        <button role="tab" aria-selected="true">
+            <span aria-hidden="true">Overview</span>
+        </button>
+
+        <button role="tab" aria-selected="false">
+            <svg aria-hidden="true" width="24" height="24">
+                <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+        </button>
+
+        <button role="tab" aria-selected="false">
+            Settings
+        </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <!--
+        Intentional meta-viewport violation:
+        user-scalable=no prevents users from zooming.
+    -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>axe-core aria-tab-name and meta-viewport test</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+
+        [role="tablist"] {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        [role="tab"] {
+            min-width: 8rem;
+            min-height: 3rem;
+            padding: 0.5rem 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>axe-core test page</h1>
+
+    <p>
+        This page intentionally contains violations of the
+        <code>aria-tab-name</code> and <code>meta-viewport</code> rules.
+    </p>
+
+    <h2>Tab-name test</h2>
+
+    <div role="tablist" aria-label="Example tabs">
+        <!--
+            Intentional aria-tab-name violation:
+            the visible text is hidden from assistive technologies.
+        -->
+        <button
+            type="button"
+            role="tab"
+            aria-selected="true">
+            <span aria-hidden="true">Overview</span>
+        </button>
+
+        <!--
+            This tab has an accessible name and should pass
+            the aria-tab-name rule.
+        -->
+        <button
+            type="button"
+            role="tab"
+            aria-selected="false">
+            Settings
+        </button>
+    </div>
+</body>
+</html>

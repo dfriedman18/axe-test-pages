@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1">
+
+    <title>axe-core image-alt test</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+
+        img {
+            display: block;
+            margin-top: 1rem;
+            border: 1px solid #555;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Image alternative text test</h1>
+
+        <p>
+            The image below intentionally has no
+            <code>alt</code> attribute and should violate the
+            axe-core <code>image-alt</code> rule.
+        </p>
+
+        <!-- Intentional image-alt violation -->
+        <img
+            src="https://placehold.co/300x200"
+            width="300"
+            height="200">
+    </main>
+</body>
+</html>

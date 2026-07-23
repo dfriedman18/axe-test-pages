@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1">
+
+    <title>axe-core empty-heading test</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+
+        section {
+            margin-top: 2rem;
+            padding: 1rem;
+            border: 1px solid #777;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Empty heading test</h1>
+
+        <p>
+            This page intentionally contains an empty heading and should
+            violate the axe-core <code>empty-heading</code> best-practice rule.
+        </p>
+
+        <section>
+            <!-- Intentional empty-heading violation -->
+            <h2></h2>
+
+            <p>
+                This section has content, but its heading contains no text.
+            </p>
+        </section>
+    </main>
+</body>
+</html>

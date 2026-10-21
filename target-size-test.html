@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>WCAG 2.5.8 Target Size Test</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        .small-buttons {
+            display: flex;
+            gap: 0;
+        }
+
+        .small-buttons button {
+            box-sizing: border-box;
+            width: 16px;
+            height: 16px;
+            padding: 0;
+            margin: 0;
+            border: 1px solid black;
+            font-size: 10px;
+            line-height: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>WCAG 2.5.8 Target Size Failure</h1>
+
+    <p>
+        These buttons are intentionally too small
+        and have insufficient spacing.
+    </p>
+
+    <div class="small-buttons">
+        <button aria-label="Option 1">1</button>
+        <button aria-label="Option 2">2</button>
+        <button aria-label="Option 3">3</button>
+        <button aria-label="Option 4">4</button>
+        <button aria-label="Option 5">5</button>
+    </div>
+</body>
+</html>
